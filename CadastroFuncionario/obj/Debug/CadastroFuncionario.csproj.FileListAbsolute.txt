@@ -1,0 +1,11 @@
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.csproj.AssemblyReference.cache
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.csproj.SuggestedBindingRedirects.cache
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.Properties.Resources.resources
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.csproj.GenerateResource.cache
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.csproj.CoreCompileInputs.cache
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\bin\Debug\CadastroFuncionario.exe.config
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\bin\Debug\CadastroFuncionario.exe
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\bin\Debug\CadastroFuncionario.pdb
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.exe
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.pdb
+C:\Users\2022102020032\source\repos\CadastroFuncionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.Cadastro_fun.resources
