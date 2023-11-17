@@ -17,6 +17,32 @@ namespace CadastroFuncionario
             InitializeComponent();
         }
 
+        void Inserir()
+        {
+            try
+            {
+                Conexao conexao = new Conexao();
+                var comando = conexao.Comando("INSERT INTO Funcionario (nome_fun, cpf_fun) VALUES (@nome, @cpf)");
+
+                comando.Parameters.AddWithValue("@nome", "Thiago");
+                comando.Parameters.AddWithValue("@cpf", "025.159.282-00");
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if(resultado > 0)
+                {
+                    MessageBox.Show("Funcionario cadastrado com sucesso!");
+
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             if(tx_nome.Text == "" || data_nas.Text == "" || mtx_cpf.Text == "" || tx_rg.Text == "" ||
@@ -36,6 +62,10 @@ namespace CadastroFuncionario
             string rg = tx_rg.Text;
             string telefone = tx_tel.Text;
             string email = tx_email.Text;
+            if (Validacao.ValidarEmail(email) == false)
+            {
+                MessageBox.Show("Email invalido");
+            }
             string endereco = tx_endereco.Text;
             string estado_civil = tx_est_civil.Text;
             string funcao = tx_funcao.Text;
@@ -45,6 +75,7 @@ namespace CadastroFuncionario
 
             Funcionario fun = new Funcionario(nome, data_nascimento, cpf, rg, telefone, email, endereco, estado_civil, funcao, salario, estado, cidade);
 
+            Inserir();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -65,7 +96,6 @@ namespace CadastroFuncionario
             tx_salario.Text = "";
             tx_estado.Text = "";
             tx_cidade.Text = "";
-
         }
     }
 }

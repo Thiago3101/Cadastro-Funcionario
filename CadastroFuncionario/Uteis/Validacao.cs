@@ -96,14 +96,29 @@ namespace CadastroFuncionario
             return true;
         }
 
-        /*public static bool ValidarEmail(string email)
+        public static bool ValidarEmail(string email)
         {
             string[] PrimeiraParte = email.Split('@');
             string parteUM = PrimeiraParte[0];
             string parteDois = PrimeiraParte[1];
 
-            string[] SegundaParte = parteDois.Split('.');
+            if(parteUM.Length == 0)
+            {
+                return false;
+            }
 
-        }*/
+            string[] SegundaParte = parteDois.Split('.');
+            string parte3 = SegundaParte[0];
+            if(parte3.Length < 3)
+            {
+                return false;
+            }
+            string parte4 = SegundaParte[1];
+            if(parte4.Length < 3)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
