@@ -14,7 +14,7 @@ namespace CadastroFuncionario
         private string _porta = "3360";
         private string _usuario = "root";
         private string _senha = "root";
-        private string _bancoDadosNome = "dssistemas_db";
+        private string _bancoDadosNome = "empresa_x2a_bd";
         private MySqlConnection connection;
         private MySqlCommand command;
 
@@ -23,7 +23,7 @@ namespace CadastroFuncionario
         {
             try
             {
-                connection = new MySqlConnection($"server_servidor); database={_bancoDadosNome}; port (porta); user={_usuario}; password={_senha}");
+                connection = new MySqlConnection($"server={_servidor};database={_bancoDadosNome};port={_porta};user={_usuario};password={_senha}");
                 connection.Open();
             }
             catch (Exception e)
@@ -42,7 +42,7 @@ namespace CadastroFuncionario
             }
             catch (Exception e)
             {
-            throw e;
+                throw e;
             }
         }
     }
