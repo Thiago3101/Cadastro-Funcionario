@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_cancelar = new System.Windows.Forms.Button();
+            System.Windows.Forms.Button btn_limpar;
             this.btn_salvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,20 +61,23 @@
             this.tx_numero = new System.Windows.Forms.TextBox();
             this.tx_complemento = new System.Windows.Forms.TextBox();
             this.cb_estado_civil = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            btn_limpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_cancelar
+            // btn_limpar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.Red;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.Location = new System.Drawing.Point(244, 570);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(157, 42);
-            this.btn_cancelar.TabIndex = 0;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            btn_limpar.BackColor = System.Drawing.Color.Red;
+            btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btn_limpar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btn_limpar.Location = new System.Drawing.Point(244, 570);
+            btn_limpar.Name = "btn_limpar";
+            btn_limpar.Size = new System.Drawing.Size(157, 42);
+            btn_limpar.TabIndex = 0;
+            btn_limpar.Text = "Limpar";
+            btn_limpar.UseVisualStyleBackColor = false;
+            btn_limpar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_salvar
             // 
@@ -425,6 +428,27 @@
             this.cb_estado_civil.Size = new System.Drawing.Size(162, 21);
             this.cb_estado_civil.TabIndex = 37;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(295, 9);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(257, 23);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "X2A Cadastro Funcionario";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::CadastroFuncionario.Properties.Resources._2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 51);
+            this.button1.TabIndex = 39;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Cadastro_fun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,6 +456,8 @@
             this.BackColor = System.Drawing.Color.Cyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(827, 712);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.cb_estado_civil);
             this.Controls.Add(this.tx_complemento);
             this.Controls.Add(this.tx_numero);
@@ -464,7 +490,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_salvar);
-            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(btn_limpar);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Cadastro_fun";
@@ -475,8 +501,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -509,6 +533,8 @@
         private System.Windows.Forms.TextBox tx_numero;
         private System.Windows.Forms.TextBox tx_complemento;
         private System.Windows.Forms.ComboBox cb_estado_civil;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button1;
     }
 }
 

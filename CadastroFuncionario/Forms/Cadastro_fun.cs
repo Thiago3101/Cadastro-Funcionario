@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroFuncionario.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace CadastroFuncionario
             try
             {
                 Conexao conexao = new Conexao();
-                var comando = conexao.Comando("INSERT INTO Funcionario VALUES (@id,@nome, @data_nascimento, @cpf, @rg, @telefone, @email, @rua, @bairro, @numero, @complemento, @estado_civil, @funcao, @salario)");
+                var comando = conexao.Comando("INSERT INTO Funcionario VALUES (@id,@nome, @data_nascimento, @cpf, @rg, @telefone, @email, @rua, @bairro, @numero, @complemento, @estado_civil, @funcao, @salario, @estado, @cidade)");
 
                 comando.Parameters.AddWithValue("@id", null);
                 comando.Parameters.AddWithValue("@nome", funcionario.Nome);
@@ -39,6 +40,8 @@ namespace CadastroFuncionario
                 comando.Parameters.AddWithValue("@estado_civil", funcionario.Estado_civil);
                 comando.Parameters.AddWithValue("@funcao", funcionario.Funcao);
                 comando.Parameters.AddWithValue("@salario", funcionario.Salario);
+                comando.Parameters.AddWithValue("@estado", funcionario.Estado);
+                comando.Parameters.AddWithValue("@cidade", funcionario.Cidade);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -120,6 +123,14 @@ namespace CadastroFuncionario
             tx_salario.Text = "";
             tx_estado.Text = "";
             tx_cidade.Text = "";
+        }
+   
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Tela_inicial AbrirForms = new Tela_inicial();
+            AbrirForms.Visible = true;
+            this.Close();
         }
     }
 }

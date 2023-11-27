@@ -12,10 +12,12 @@ email_fun varchar(100),
 rua_fun varchar(200),
 bairro_fun varchar(200),
 numero_fun int,
-complemento varchar(300),
+complemento_fun varchar(300),
 estado_civil_fun varchar(100),
 funcao_fun varchar(100),
-salario_fun double 
+salario_fun double,
+estado_fun varchar(200),
+cidade_fun varchar(200)
 );
 
 select * from Funcionario;

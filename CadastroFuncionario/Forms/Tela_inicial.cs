@@ -36,7 +36,9 @@ namespace CadastroFuncionario.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Consultar_fun abrirForms = new Consultar_fun();
+            this.Visible = false;
+            abrirForms.ShowDialog();
         }
     }
 }

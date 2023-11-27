@@ -87,3 +87,4 @@ C:\Users\2022102020032\Cadastro-Funcionario\CadastroFuncionario\obj\Debug\Cadast
 C:\Users\2022102020032\Cadastro-Funcionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.exe
 C:\Users\2022102020032\Cadastro-Funcionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.pdb
 C:\Users\2022102020032\Cadastro-Funcionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.Forms.Tela_inicial.resources
+C:\Users\2022102020032\Cadastro-Funcionario\CadastroFuncionario\obj\Debug\CadastroFuncionario.Forms.Consultar_fun.resources
