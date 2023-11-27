@@ -23,7 +23,7 @@ namespace CadastroFuncionario
             try
             {
                 Conexao conexao = new Conexao();
-                var comando = conexao.Comando("INSERT INTO Funcionario VALUES (@id,@nome, @data_nascimento, @cpf, @rg, @telefone, @email, @endereco, @estado_civil, @funcao, @salario)");
+                var comando = conexao.Comando("INSERT INTO Funcionario VALUES (@id,@nome, @data_nascimento, @cpf, @rg, @telefone, @email, @rua, @bairro, @numero, @complemento, @estado_civil, @funcao, @salario)");
 
                 comando.Parameters.AddWithValue("@id", null);
                 comando.Parameters.AddWithValue("@nome", funcionario.Nome);
@@ -32,7 +32,10 @@ namespace CadastroFuncionario
                 comando.Parameters.AddWithValue("@rg", funcionario.Rg);
                 comando.Parameters.AddWithValue("@telefone", funcionario.Telefone);
                 comando.Parameters.AddWithValue("@email", funcionario.Email);
-                comando.Parameters.AddWithValue("@endereco", funcionario.Endereco);
+                comando.Parameters.AddWithValue("@rua", funcionario.Rua);
+                comando.Parameters.AddWithValue("@bairro", funcionario.Bairro);
+                comando.Parameters.AddWithValue("@numero", funcionario.Numero);
+                comando.Parameters.AddWithValue("@complemento", funcionario.Complemento);
                 comando.Parameters.AddWithValue("@estado_civil", funcionario.Estado_civil);
                 comando.Parameters.AddWithValue("@funcao", funcionario.Funcao);
                 comando.Parameters.AddWithValue("@salario", funcionario.Salario);
@@ -56,9 +59,8 @@ namespace CadastroFuncionario
         {
             try
             {
-                if (tx_nome.Text == "" || data_nas.Text == "" || mtx_cpf.Text == "" || tx_rg.Text == "" ||
-                tx_rg.Text == "" || tx_tel.Text == "" || tx_email.Text == "" || tx_endereco.Text == "" ||
-                tx_est_civil.Text == "" || tx_funcao.Text == "" || tx_salario.Text == "" || tx_estado.Text == "" || tx_cidade.Text == "")
+                if (tx_nome.Text == "" || data_nas.Text == "" || mtx_cpf.Text == "" || mtx_rg.Text == "" || mtx_tel.Text == "" || tx_email.Text == "" || tx_rua.Text == "" ||
+                tx_bairro.Text == "" || tx_numero.Text == "" || tx_complemento.Text == "" || cb_estado_civil.Text == "" || tx_funcao.Text == "" || tx_salario.Text == "" || tx_estado.Text == "" || tx_cidade.Text == "")
                 {
                     MessageBox.Show("Alguns campos não foram preenchidos");
                 }
@@ -70,21 +72,24 @@ namespace CadastroFuncionario
                 {
                     MessageBox.Show("CPF inválido.");
                 }
-                string rg = tx_rg.Text;
-                string telefone = tx_tel.Text;
+                string rg = mtx_rg.Text;
+                string telefone = mtx_tel.Text;
                 string email = tx_email.Text;
                 if (Validacao.ValidarEmail(email) == false)
                 {
                     MessageBox.Show("Email invalido");
                 }
-                string endereco = tx_endereco.Text;
-                string estado_civil = tx_est_civil.Text;
+                string rua = tx_rua.Text;
+                string bairro = tx_bairro.Text;
+                int numero = Convert.ToInt32(tx_numero.Text);
+                string complemento = tx_complemento.Text;
+                string estado_civil = cb_estado_civil.Text;
                 string funcao = tx_funcao.Text;
                 double salario = Convert.ToDouble(tx_salario.Text);
                 string estado = tx_estado.Text;
                 string cidade = tx_cidade.Text;
 
-                Funcionario fun = new Funcionario(nome, data_nascimento, cpf, rg, telefone, email, endereco, estado_civil, funcao, salario, estado, cidade);
+                Funcionario fun = new Funcionario(nome, data_nascimento, cpf, rg, telefone, email, rua, bairro, numero, complemento, estado_civil, funcao, salario, estado, cidade);
 
                 Inserir(fun);
             }
@@ -103,11 +108,14 @@ namespace CadastroFuncionario
         {
             tx_nome.Text = "";
             mtx_cpf.Text = "";
-            tx_rg.Text = "";
-            tx_tel.Text = "";
+            mtx_rg.Text = "";
+            mtx_tel.Text = "";
             tx_email.Text = "";
-            tx_endereco.Text = "";
-            tx_est_civil.Text = "";
+            tx_rua.Text = "";
+            tx_bairro.Text = "";
+            tx_numero.Text = "";
+            tx_complemento.Text = "";
+            cb_estado_civil.Text = "";
             tx_funcao.Text = "";
             tx_salario.Text = "";
             tx_estado.Text = "";

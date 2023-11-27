@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroFuncionario.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace CadastroFuncionario
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cadastro_fun());
+            Application.Run(new Tela_inicial());
         }
     }
 }
