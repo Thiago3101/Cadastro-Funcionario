@@ -102,5 +102,19 @@ namespace CadastroFuncionario.Forms
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tela_inicial abriForms = new Tela_inicial();
+            abriForms.Visible = true;
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Consultar_emp abrirforms = new Consultar_emp();
+            this.Visible = false;
+            abrirforms.ShowDialog();
+        }
     }
 }

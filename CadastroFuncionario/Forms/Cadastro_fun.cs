@@ -132,5 +132,13 @@ namespace CadastroFuncionario
             AbrirForms.Visible = true;
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Consultar_fun abrirForms = new Consultar_fun();
+            this.Visible = false;
+            abrirForms.ShowDialog();
+            
+        }
     }
 }

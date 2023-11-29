@@ -78,5 +78,13 @@ namespace CadastroFuncionario.Forms
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cadastro_fun abrirForms = new Cadastro_fun();
+            this.Visible = false;
+            abrirForms.ShowDialog();
+
+        }
     }
 }

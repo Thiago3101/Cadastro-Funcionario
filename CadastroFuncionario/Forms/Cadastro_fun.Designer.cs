@@ -63,6 +63,7 @@
             this.cb_estado_civil = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             btn_limpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -286,7 +287,7 @@
             // 
             this.tx_cidade.Location = new System.Drawing.Point(587, 319);
             this.tx_cidade.Name = "tx_cidade";
-            this.tx_cidade.Size = new System.Drawing.Size(205, 20);
+            this.tx_cidade.Size = new System.Drawing.Size(178, 20);
             this.tx_cidade.TabIndex = 25;
             // 
             // label12
@@ -432,7 +433,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(295, 9);
+            this.label17.Location = new System.Drawing.Point(240, 12);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(257, 23);
             this.label17.TabIndex = 38;
@@ -449,6 +450,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(607, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(158, 52);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Consultar Funcionários";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Cadastro_fun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,6 +467,7 @@
             this.BackColor = System.Drawing.Color.Cyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(827, 712);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cb_estado_civil);
@@ -535,6 +547,7 @@
         private System.Windows.Forms.ComboBox cb_estado_civil;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
