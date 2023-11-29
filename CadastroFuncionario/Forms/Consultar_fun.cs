@@ -73,5 +73,10 @@ namespace CadastroFuncionario.Forms
             AbrirForms.Visible = true;
             this.Close();
         }
+
+        private void Consultar_fun_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

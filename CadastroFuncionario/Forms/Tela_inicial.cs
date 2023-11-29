@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace CadastroFuncionario.Forms
 {
@@ -19,12 +20,16 @@ namespace CadastroFuncionario.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Cadastrar_emp abrirForms = new Cadastrar_emp();
+            this.Visible = false;
+            abrirForms.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Consultar_emp abrirForms = new Consultar_emp();
+            this.Visible = false;
+            abrirForms.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

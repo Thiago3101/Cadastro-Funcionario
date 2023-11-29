@@ -75,6 +75,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Consultar_fun";
             this.Text = "Consultar_fun";
+            this.Load += new System.EventHandler(this.Consultar_fun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
